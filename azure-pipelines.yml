@@ -10,10 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- script: curl "https://dev87841.service-now.com/api/now/table/change_request" \
+                --request POST \
+                --header "Accept:application/json" \
+                --header "Content-Type:application/json" \
+                --data "{\"start_date\":\"$(Date:yyyy-MM-dd HH:mm:ss)",\"description\":\"\\\"Demo DotNet application Release request for https://dev.azure.com/utilitieslabDemo01/demoDotnet/_build/results?buildId=$(Build.BuildId)&view=results , Github Commit  id $(Build.SourceVersion) and Commit Message $(Build.SourceVersionMessage)\\\"\",\"priority\":\"3\"}" \
+                --user 'admin':'Quetro@#$7028'
