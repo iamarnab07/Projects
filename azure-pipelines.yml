@@ -16,7 +16,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      startDATE=$(date '+%Y-%m-%d %H:%M:%S') && endDATE=$(date '+%Y-%m-%d %H:%M:%S -d "+1 day") && curl "https://dev87841.service-now.com/api/now/table/change_request" \
+      startDATE=$(date '+%Y-%m-%d %H:%M:%S') && endDATE=$(date '+%Y-%m-%d %H:%M:%S' -d "+1 day") && curl "https://dev87841.service-now.com/api/now/table/change_request" \
             --request POST \
             --header "Accept:application/json" \
             --header "Content-Type:application/json" \
