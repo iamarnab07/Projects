@@ -14,5 +14,5 @@ steps:
                 --request POST \
                 --header "Accept:application/json" \
                 --header "Content-Type:application/json" \
-                --data "{\"start_date\":\"$(Date:yyyy-MM-dd HH:mm:ss)\",\"description\":\"\\\"Demo DotNet application Release request for https://dev.azure.com/utilitieslabDemo01/demoDotnet/_build/results?buildId=$(Build.BuildId)&view=results , Github Commit  id $(Build.SourceVersion) and Commit Message $(Build.SourceVersionMessage)\\\"\",\"priority\":\"3\"}" \
+                --data "{\"start_date\":\"$(Date:yyyy-MM-dd HH:mm:ss)\",\"description\":\"Demo DotNet application Release request for https://dev.azure.com/utilitieslabDemo01/demoDotnet/_build/results?buildId=$(Build.BuildId)&view=results , Github Commit  id $(Build.SourceVersion) and Commit Message $(Build.SourceVersionMessage)\"}" \
                 --user 'admin':'Quetro@#$7028'
