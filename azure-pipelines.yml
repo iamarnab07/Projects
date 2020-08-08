@@ -1,4 +1,4 @@
-name: $(Build.DefinitionName)_$(Build.DefinitionVersion)_$(Build.RequestedFor)_$(Build.BuildId)_$(My.Variable)
+name: $(Date:yyyy-MM-dd HH:mm:ss)
 
 
 trigger:
